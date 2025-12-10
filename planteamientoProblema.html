@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planteamiento del Problema - SuperTicket.bo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    .problem-page {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #fff8f0, #ffffff);
+      padding: 60px 20px;
+    }
+
+    .problem-container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      padding: 50px 60px;
+      padding: 50px 60px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      border: 1px solid #ffd4b3;
+    }
+
+    .problem-container h2 {
+      font-size: 2.6rem;
+      color: #d84315;
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .problem-container h2::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 5px;
+      background: #ff6b00;
+      margin: 20px auto 0;
+      border-radius: 3px;
+    }
+
+    .problem-list {
+      background: #fff3e0;
+      padding: 30px;
+      border-radius: 16px;
+      border-left: 8px solid #ff6b00;
+      margin: 35px 0;
+      box-shadow: 0 8px 25px rgba(255,107,0,0.15);
+    }
+
+    .problem-list li {
+      font-size: 1.15rem;
+      margin: 18px 0;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    .problem-list li::before {
+      content: "Warning";
+      color: #ff6b00;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+
+    .final-question {
+      background: linear-gradient(135deg, #ffe0b2, #ffcc80);
+      padding: 35px;
+      border-radius: 16px;
+      text-align: center;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #bf360c;
+      margin: 50px 0;
+      box-shadow: 0 10px 30px rgba(191,54,12,0.2);
+      border: 2px solid #ff8a65;
+    }
+
+    @media (max-width: 768px) {
+      .problem-container { padding: 40px 25px; margin: 20px; }
+      .problem-container h2 { font-size: 2.1rem; }
+      .final-question { font-size: 1.2rem; padding: 25px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logoTiket.png" alt="Logo del sitio">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+
+        <!-- GENERALIDADES (lo dejé tal cual, funciona perfecto) -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Generalidades <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu simple">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="antecedentes.html">Antecedentes</a></li>
+            <li><a href="planteamientoProblema.html">Planteamiento del Problema</a></li>
+            <li><a href="arbolProblemas.html">Árbol de Problemas</a></li>
+            <li><a href="formulacionProblema.html">Formulación del Problema</a></li>
+            <li><a href="propocitoEstudio.html">Propósito del Estudio</a></li>
+            <li><a href="metodos.html">Método, Medios e Instrumentos</a></li>
+            <li><a href="planificacionActividades.html">Planificación de Actividades</a></li>
+          </ul>
+        </li>
+
+        <!-- ANÁLISIS ESTRUCTURADO → AHORA ES PIXEL PERFECT CON TU FOTO -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Análisis Estructurado <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu mega">
+            <!-- Título principal -->
+            <li class="mega-title">Análisis y Diseño Estructurado</li>
+
+            <!-- MODELO AMBIENTAL (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO AMBIENTAL</span>
+            </li>
+            <li><a href="declaracionPropocitos.html">Declaración de Propósitos</a></li>
+            <li><a href="diagrama.html">Diagrama Contexto</a></li>
+            <li><a href="acontesimiento.html">Lista de Acontecimientos</a></li>
+
+            <!-- MODELO COMPORTAMIENTO (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO COMPORTAMIENTO</span>
+            </li>
+            <li><a href="flujoDatos.html">Diagrama de Flujo de Datos (DFD)</a></li>
+            <li><a href="entidadRelacio.html">Diagrama Entidad Relación (DER)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="orientadoObejeto.html">Orientado a Objetos</a></li>
+        <li><a href="video.html">Video Tutorial</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="problem-page">
+    <div class="problem-container">
+      <h2>Planteamiento del Problema</h2>
+
+      <p>
+        A pesar de los avances que representa SuperTicket.bo en la venta de entradas en línea en Bolivia, el sistema actual presenta <strong>limitaciones significativas</strong> que afectan tanto a los organizadores de eventos como a los usuarios finales, generando ineficiencias operativas y una experiencia de usuario subóptima.
+      </p>
+
+      <p>Entre las principales deficiencias detectadas se encuentran:</p>
+
+      <ul class="problem-list">
+        <li>Falta de automatización total en el proceso de validación y control de acceso en eventos.</li>
+        <li>Comunicación limitada entre organizadores y compradores (notificaciones, cambios de horario, cancelaciones, etc.).</li>
+        <li>Escasa transparencia y acceso en tiempo real a reportes detallados de ventas y aforo para los organizadores.</li>
+        <li>Problemas de escalabilidad y saturación del sistema en eventos de alta demanda (venta masiva de entradas).</li>
+        <li>Dependencia excesiva de procesos manuales en puntos de venta físicos y validación en puerta.</li>
+        <li>Falta de funcionalidades avanzadas como reventa controlada, suscripciones o paquetes familiares.</li>
+        <li>Experiencia móvil no totalmente optimizada en algunos módulos del sistema.</li>
+      </ul>
+
+      <p>
+        Estas carencias provocan <strong>retrasos en el ingreso a eventos, errores en el control de aforo, insatisfacción del cliente final y pérdida de ingresos</strong> para los organizadores. Además, en un contexto donde la competencia en el sector de ticketing digital crece rápidamente, estas limitaciones representan un riesgo para la sostenibilidad y liderazgo de la plataforma.
+      </p>
+
+      <div class="final-question">
+        ¿Cómo puede un sistema de información basado en la web mejorar la gestión, venta y control de entradas para eventos culturales y artísticos en Bolivia, garantizando mayor eficiencia, seguridad en las transacciones y una experiencia de usuario superior tanto para organizadores como para asistentes?
+      </div>
+
+      <p>
+        Este proyecto busca dar respuesta a dicha interrogante mediante el análisis profundo y el rediseño optimizado del sistema SuperTicket.bo, aplicando metodologías modernas de ingeniería de software que permitan superar las debilidades actuales y convertirlas en oportunidades de mejora competitiva.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperTicket.bo - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

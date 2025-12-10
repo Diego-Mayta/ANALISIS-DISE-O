@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antecedentes - SuperTicket.bo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    .antecedentes-page {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #f0f8ff, #ffffff);
+      padding: 60px 20px;
+    }
+
+    .antecedentes-container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      padding: 50px 60px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      border: 1px solid #bbdefb;
+    }
+
+    .antecedentes-container h2 {
+      font-size: 2.6rem;
+      color: #1565c0;
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .antecedentes-container h2::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 5px;
+      background: #2196f3;
+      margin: 20px auto 0;
+      border-radius: 3px;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 50px 0;
+      padding-left: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #2196f3;
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 50px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      background: #2196f3;
+      border: 4px solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px #bbdefb;
+    }
+
+    .timeline-item h3 {
+      color: #1565c0;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      padding: 30px;
+      border-radius: 16px;
+      border-left: 8px solid #2196f3;
+      margin: 40px 0;
+      font-size: 1.15rem;
+      box-shadow: 0 10px 30px rgba(33,150,243,0.15);
+    }
+
+    @media (max-width: 768px) {
+      .antecedentes-container { padding: 40px 25px; margin: 20px; }
+      .antecedentes-container h2 { font-size: 2.1rem; }
+      .timeline { padding-left: 20px; }
+      .timeline-item { padding-left: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logoTiket.png" alt="Logo del sitio">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+
+        <!-- GENERALIDADES (lo dejé tal cual, funciona perfecto) -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Generalidades <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu simple">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="antecedentes.html">Antecedentes</a></li>
+            <li><a href="planteamientoProblema.html">Planteamiento del Problema</a></li>
+            <li><a href="arbolProblemas.html">Árbol de Problemas</a></li>
+            <li><a href="formulacionProblema.html">Formulación del Problema</a></li>
+            <li><a href="propocitoEstudio.html">Propósito del Estudio</a></li>
+            <li><a href="metodos.html">Método, Medios e Instrumentos</a></li>
+            <li><a href="planificacionActividades.html">Planificación de Actividades</a></li>
+          </ul>
+        </li>
+
+        <!-- ANÁLISIS ESTRUCTURADO → AHORA ES PIXEL PERFECT CON TU FOTO -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Análisis Estructurado <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu mega">
+            <!-- Título principal -->
+            <li class="mega-title">Análisis y Diseño Estructurado</li>
+
+            <!-- MODELO AMBIENTAL (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO AMBIENTAL</span>
+            </li>
+            <li><a href="declaracionPropocitos.html">Declaración de Propósitos</a></li>
+            <li><a href="diagrama.html">Diagrama Contexto</a></li>
+            <li><a href="acontesimiento.html">Lista de Acontecimientos</a></li>
+
+            <!-- MODELO COMPORTAMIENTO (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO COMPORTAMIENTO</span>
+            </li>
+            <li><a href="flujoDatos.html">Diagrama de Flujo de Datos (DFD)</a></li>
+            <li><a href="entidadRelacio.html">Diagrama Entidad Relación (DER)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="orientadoObejeto.html">Orientado a Objetos</a></li>
+        <li><a href="video.html">Video Tutorial</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="antecedentes-page">
+    <div class="antecedentes-container">
+      <h2>Antecedentes</h2>
+
+      <p>
+        La venta de entradas para eventos culturales y de entretenimiento en Bolivia ha experimentado una transformación radical en las últimas décadas, pasando de un modelo exclusivamente presencial a uno predominantemente digital.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Antes del 2010 – Venta presencial tradicional</h3>
+          <p>La adquisición de entradas se realizaba únicamente en taquillas físicas, generando largas filas, pérdida de tiempo, reventa informal y falta de control sobre el aforo real de los eventos.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>2010–2015 – Primeras plataformas digitales</h3>
+          <p>Aparecen los primeros intentos de venta en línea en Bolivia (principalmente para eventos internacionales), pero con limitaciones técnicas, poca confianza del público y métodos de pago restringidos.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>2016 – Nacimiento de SuperTicket.bo</h3>
+          <p>Se funda <strong>Sociedad Comercial para el Ticketing SRL</strong>, creadora de SuperTicket.bo, con el objetivo de profesionalizar y digitalizar la venta de entradas en el país.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>2018–2020 – Crecimiento exponencial</h3>
+          <p>La plataforma se consolida como líder del mercado boliviano, incorporando pagos con tarjeta, QR y billeteras móviles. Introduce la entrega inmediata de entradas digitales y códigos QR para control de acceso.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>2020–2021 – Pandemia y boom del e-commerce</h3>
+          <p>Durante la emergencia sanitaria, SuperTicket.bo fue una de las pocas plataformas que mantuvo operaciones, adaptándose rápidamente a eventos virtuales y reforzando su infraestructura digital.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>2022–2025 – Madurez del mercado</h3>
+          <p>Hoy SuperTicket.bo es la red de ticketing más grande de Bolivia, con presencia en La Paz, Santa Cruz, Cochabamba, Sucre y otras ciudades, manejando desde ferias locales hasta conciertos internacionales de gran magnitud.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          Actualmente, SuperTicket.bo procesa miles de transacciones diarias, trabaja con los principales productores de eventos del país y ha logrado que más del <strong>75% de las entradas</strong> para conciertos y espectáculos de gran formato se vendan de forma digital, marcando un hito en la modernización del sector cultural boliviano.
+        </p>
+      </div>
+
+      <p>
+        <p>
+        Sin embargo, este rápido crecimiento también ha puesto en evidencia ciertas limitaciones técnicas y operativas que afectan la experiencia de usuarios y organizadores, lo que justifica la necesidad del presente proyecto de análisis y rediseño del sistema.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperTicket.bo - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

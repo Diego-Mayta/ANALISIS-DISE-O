@@ -1,0 +1,888 @@
+/* --- Reset general --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- Header con logo y menú --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e2f;
+  color: rgb(255, 255, 255);
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+  height: 80px;
+}
+
+/* --- Navegación --- */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: rgb(253, 249, 249);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #61dafb;
+}
+
+/* --- Secciones generales --- */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  border-bottom: 3px solid #ddd;
+}
+
+/* --- Inicio --- */
+#inicio {
+  background: linear-gradient(135deg, #61dafb, #20232a);
+  color: white;
+}
+
+#inicio h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+#inicio p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- Video --- */
+#video {
+  background-color: #ffffff;
+}
+
+#video h2 {
+  font-size: 2em;
+  color: #20232a;
+  margin-bottom: 20px;
+}
+
+#video video {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Contacto --- */
+#contacto {
+  background-color: #f0f2f5;
+}
+
+#contacto h2 {
+  color: #20232a;
+  margin-bottom: 25px;
+}
+
+.contacto form {
+  background-color: white;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contacto label {
+  font-weight: 600;
+  text-align: left;
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contacto button {
+  background-color: #20232a;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contacto button:hover {
+  background-color: #61dafb;
+  color: #20232a;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* --- CARRUSEL AUTOMÁTICO --- */
+.carrusel {
+  max-width: 800px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Efecto de desvanecido */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4;}
+  to {opacity: 1;}
+}
+
+
+/* Carrusel */
+.carrusel {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Texto sobre la imagen */
+.texto-slide {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.texto-slide h2 {
+  margin: 0 0 5px 0;
+  font-size: 24px;
+}
+
+.texto-slide p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Efecto fade */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4;}
+  to {opacity: 1;}
+}
+
+
+/* --- Marco Teorico --- */
+#mt {
+  background-color: #ffffff;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border: 2px solid #1e1e2f;
+}
+
+#mt h2 {
+  color: #1e1e2f;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#mt h3 {
+  color: #20232a;
+  font-size: 1.8em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #61dafb;
+  padding-bottom: 5px;
+}
+
+#mt p, #mt ul, #mt ol {
+  text-align: justify;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+#mt ul, #mt ol {
+  margin-left: 25px;
+}
+
+#mt table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+#mt table, #mt th, #mt td {
+  border: 1px solid #1e1e2f;
+}
+
+#mt th, #mt td {
+  padding: 12px;
+  text-align: left;
+}
+
+#mt th {
+  background-color: #1e1e2f;
+  color: white;
+}
+
+#mt img {
+  max-width: 100%;
+  height: auto;
+  margin: 25px 0;
+  border: 2px solid #1e1e2f;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Añadir separación entre secciones dentro de Marco Teórico */
+#mt section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-left: 4px solid #61dafb;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+#mt img {
+  display: block;
+  margin: 25px auto; /* centra horizontalmente */
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #1e1e2f;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Tarjetas de eventos */
+.tarjetas-eventos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.tarjeta {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 300px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tarjeta h2 {
+  color: #1e1e2f;
+  font-size: 1.5em;
+  margin: 15px 0 10px 0;
+}
+
+.tarjeta p {
+  font-size: 1em;
+  color: #555;
+  padding: 0 15px 15px 15px;
+}
+
+.tarjeta button {
+  background-color: #61dafb;
+  color: #1e1e2f;
+  border: none;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.tarjeta button:hover {
+  background-color: #1e1e2f;
+  color: #61dafb;
+  transform: scale(1.05);
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Responsivo */
+@media (max-width: 1000px) {
+  .tarjetas-eventos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    max-width: 90%;
+  }
+}
+/* ▼▼▼ MENÚ DESPLEGABLE GENERALIDADES ▼▼▼ */
+
+nav ul li {
+  position: relative;
+}
+
+/* Submenú oculto */
+.dropdown-menu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: #ffffff;
+  padding: 10px 0;
+  border-radius: 8px;
+  list-style: none;
+  min-width: 180px;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 50;
+}
+
+/* Estilo de opciones */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #1e1e2f;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li a:hover {
+  background: #e6e6e6;
+}
+
+/* Mostrar menú al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Cambiar color del enlace principal */
+.dropdown:hover > a {
+  color: #61dafb !important;
+}
+
+/* ▲▲▲ FIN MENÚ DESPLEGABLE ▲▲▲ */
+/* Estilos del menú principal */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 35px; /* Más espacio entre items */
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fffbfb;
+  font-weight: 600; /* Más bold para que resalte */
+  padding: 12px 0;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+nav ul li a.activo,
+nav ul li a:hover {
+  color: #ff6b00;
+}
+
+/* Dropdown principal */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 12px 0;
+}
+
+.arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Cuando está abierto giramos la flecha */
+.dropdown.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  min-width: 300px; /* Un poco más ancho para que quepa bien */
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12); /* Sombra más suave y moderna */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  padding: 15px 0; /* Más padding arriba/abajo */
+  z-index: 1000;
+  margin-top: 15px; /* Separado del botón */
+}
+
+/* Flechita superior */
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+/* Mostrar menú al hacer hover o clic */
+.dropdown:hover .dropdown-menu,
+.dropdown.active .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 10px;
+}
+
+.dropdown-menu li {
+  padding: 0 20px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio perfecto entre ícono y texto */
+  color: #444;
+  font-size: 15px;
+  padding: 10px 0; /* Más espacio vertical */
+  text-align: left;
+}
+
+/* Íconos alineados y perfectos */
+.dropdown-menu li a::before {
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 900;
+  color: #888; /* Gris más suave */
+  width: 24px; /* Fijo para alineación */
+  text-align: center;
+  font-size: 16px;
+}
+
+.dropdown-menu li:nth-child(1) a::before { content: "\f05a"; } /* info-circle */
+.dropdown-menu li:nth-child(2) a::before { content: "\f1da"; } /* history */
+.dropdown-menu li:nth-child(3) a::before { content: "\f071"; } /* exclamation-triangle */
+.dropdown-menu li:nth-child(4) a::before { content: "\f1bb"; } /* tree */
+.dropdown-menu li:nth-child(5) a::before { content: "\f128"; } /* question */
+.dropdown-menu li:nth-child(6) a::before { content: "\f140"; } /* bullseye */
+.dropdown-menu li:nth-child(7) a::before { content: "\f085"; } /* cogs */
+.dropdown-menu li:nth-child(8) a::before { content: "\f073"; } /* calendar-alt */
+
+/* Hover en cada opción: más bonito */
+.dropdown-menu li:hover {
+  background: #f8f9fa; /* Gris claro sutil */
+}
+
+.dropdown-menu li:hover a {
+  color: #ff6b00;
+}
+
+.dropdown-menu li:hover a::before {
+  color: #ff6b00; /* Ícono también cambia de color */
+}
+
+/* Responsivo móvil */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: none;
+    gap: 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    background: #f8f9fa;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 10px 20px;
+  }
+
+  .dropdown-menu::before {
+    display: none;
+  }
+}
+/* === MENÚS ANIDADOS - ANÁLISIS ESTRUCTURADO (como en tu foto) === */
+.mega-menu {
+  width: 380px;
+  padding: 20px 0 !important;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mega-menu::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 11px solid #ff6b00;
+  z-index: 1;
+}
+
+.mega-menu::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 11px solid white;
+  z-index: 2;
+}
+
+/* Títulos de sección con línea naranja arriba */
+.has-submenu > a {
+  position: relative;
+  font-weight: 700;
+  color: #333;
+  padding: 12px 24px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.has-submenu > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 2px;
+  background: #ff6b00;
+}
+
+/* Submenú (se abre al hover) */
+.submenu {
+  display: none;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin: 8px 20px 15px 40px;
+  padding: 10px 0;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+/* Flecha lateral */
+.sub-arrow {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+  color: #999;
+}
+
+.has-submenu:hover .sub-arrow {
+  transform: rotate(90deg);
+  color: #ff6b00;
+}
+
+/* Items del submenú */
+.submenu li a {
+  padding: 9px 20px !important;
+  font-size: 14.5px;
+  color: #444;
+}
+
+.submenu li:hover {
+  background: #fff0e6 !important;
+}
+
+.submenu li:hover a {
+  color: #ff6b00;
+  font-weight: 600;
+}
+
+/* Separador naranja */
+.separator {
+  border-top: 1px solid #eee;
+  margin: 12px 24px;
+  position: relative;
+}
+
+.separator::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #ff6b00, transparent);
+}
+/* ==================== MEGA MENÚ ANÁLISIS ESTRUCTURADO (100% IGUAL A TU FOTO) ==================== */
+.dropdown-menu.mega {
+  width: 430px;
+  padding: 28px 35px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+}
+
+.mega-title {
+  color: #ff6b00;
+  font-weight: 700;
+  font-size: 17px;
+  padding-bottom: 14px;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #ff6b00;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Títulos "MODELO AMBIENTAL" y "MODELO COMPORTAMIENTO" → no clicables */
+.section-header {
+  margin: 28px 0 12px 0 !important;
+}
+.section-header span {
+  position: relative;
+  color: #ff6b00;
+  font-weight: 700;
+  font-size: 14.8px;
+  text-transform: uppercase;
+  padding-left: 32px;
+}
+.section-header span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 20px;
+  height: 2.5px;
+  background: #ff6b00;
+  transform: translateY(-50%);
+}
+.section-header span::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  right: -30px;
+  height: 1px;
+  background: #ffe0b2;
+  transform: translateY(-50%);
+}
+
+/* Ítems clicables */
+.dropdown-menu.mega > li:not(.mega-title):not(.section-header) a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 20px;
+  color: #333;
+  font-size: 14.8px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.dropdown-menu.mega > li:not(.mega-title):not(.section-header) a:hover {
+  background: #e1f5fe;
+  color: #0277bd;
+  font-weight: 600;
+  padding-left: 11px 28px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+/* ======== CONTACTOS MEJORADO ======== */
+#contacto {
+  background: linear-gradient(135deg, #ffffff, #f3f7ff);
+  padding: 80px 20px;
+}
+
+#contacto h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #1e1e2f;
+  margin-bottom: 25px;
+}
+
+/* Contenedor del formulario */
+.form-contacto {
+  max-width: 650px;
+  background: white;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  border-left: 6px solid #61dafb;
+  border-right: 6px solid #20232a;
+}
+
+/* Etiquetas */
+.form-contacto label {
+  font-weight: 700;
+  color: #20232a;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Inputs y textarea */
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s ease;
+  margin-bottom: 18px;
+}
+
+/* Efecto al seleccionar */
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  border-color: #61dafb;
+  background: #eefaff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(97,218,251,0.5);
+}
+
+/* Botón */
+.form-contacto button {
+  width: 100%;
+  padding: 16px;
+  background: #20232a;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.form-contacto button:hover {
+  background: #61dafb;
+  color: #20232a;
+  transform: scale(1.05);
+}
+
+/* Iconos dentro del formulario */
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #61dafb;
+  font-size: 18px;
+}
+
+.input-group input,
+.input-group textarea {
+  padding-left: 45px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-contacto {
+    padding: 25px;
+  }
+
+  #contacto h2 {
+    font-size: 2em;
+  }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducción - SuperTicket.bo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    /* ESTILOS ESPECÍFICOS PARA LA PÁGINA DE INTRODUCCIÓN */
+    .intro-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f5f9ff 0%, #e8f4fc 100%);
+      padding: 60px 20px;
+    }
+
+    .intro-container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      padding: 50px 60px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      border: 1px solid #e0e0e0;
+    }
+
+    .intro-container h2 {
+      font-size: 2.6rem;
+      color: #ff6b00;
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .intro-container h2::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 4px;
+      background: #ff6b00;
+      margin: 20px auto 0;
+      border-radius: 2px;
+    }
+
+    .intro-container p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 24px;
+      text-align: justify;
+    }
+
+    .intro-container p strong {
+      color: #1e3a8a;
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, #fff3e0 0%, #ffe0b2 100%);
+      padding: 20px 30px;
+      border-left: 6px solid #ff6b00;
+      border-radius: 0 12px 12px 0;
+      margin: 30px 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 20px rgba(255, 107, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .intro-container {
+        padding: 40px 25px;
+        margin: 20px;
+      }
+      .intro-container h2 {
+        font-size: 2.1rem;
+      }
+      .intro-container p {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logoTiket.png" alt="Logo del sitio">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+
+        <!-- GENERALIDADES (lo dejé tal cual, funciona perfecto) -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Generalidades <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu simple">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="antecedentes.html">Antecedentes</a></li>
+            <li><a href="planteamientoProblema.html">Planteamiento del Problema</a></li>
+            <li><a href="arbolProblemas.html">Árbol de Problemas</a></li>
+            <li><a href="formulacionProblema.html">Formulación del Problema</a></li>
+            <li><a href="propocitoEstudio.html">Propósito del Estudio</a></li>
+            <li><a href="metodos.html">Método, Medios e Instrumentos</a></li>
+            <li><a href="planificacionActividades.html">Planificación de Actividades</a></li>
+          </ul>
+        </li>
+
+        <!-- ANÁLISIS ESTRUCTURADO → AHORA ES PIXEL PERFECT CON TU FOTO -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Análisis Estructurado <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu mega">
+            <!-- Título principal -->
+            <li class="mega-title">Análisis y Diseño Estructurado</li>
+
+            <!-- MODELO AMBIENTAL (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO AMBIENTAL</span>
+            </li>
+            <li><a href="declaracionPropocitos.html">Declaración de Propósitos</a></li>
+            <li><a href="diagrama.html">Diagrama Contexto</a></li>
+            <li><a href="acontesimiento.html">Lista de Acontecimientos</a></li>
+
+            <!-- MODELO COMPORTAMIENTO (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO COMPORTAMIENTO</span>
+            </li>
+            <li><a href="flujoDatos.html">Diagrama de Flujo de Datos (DFD)</a></li>
+            <li><a href="entidadRelacio.html">Diagrama Entidad Relación (DER)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="orientadoObejeto.html">Orientado a Objetos</a></li>
+        <li><a href="video.html">Video Tutorial</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="intro-page">
+    <div class="intro-container">
+      <h2>Introducción</h2>
+
+      <p>
+        En la era digital actual, el <strong>comercio electrónico</strong> ha revolucionado la forma en que las personas adquieren bienes y servicios, eliminando barreras geográficas y temporales. En Bolivia, un país con una rica tradición cultural y un creciente interés por eventos como conciertos, obras teatrales y festivales, plataformas como <strong>SuperTicket.bo</strong> han emergido como soluciones innovadoras para facilitar la <strong>venta y administración de entradas en línea</strong>. Esta plataforma no solo representa un avance tecnológico, sino también un puente entre organizadores de eventos y un público cada vez más conectado.
+      </p>
+
+      <p>
+        SuperTicket.bo, operada por <em>Sociedad Comercial para el Ticketing SRL</em> con sede en La Paz y Santa Cruz, se posiciona como la principal red de ticketing en Bolivia. Lanzada para modernizar el sector de eventos, permite a los usuarios comprar entradas de manera rápida y segura desde cualquier dispositivo móvil o computadora. Con opciones de pago digitales como tarjetas de crédito, QR Simple y BaniPay, la plataforma garantiza transacciones seguras y entrega inmediata de boletos en formato PDF por correo electrónico.
+      </p>
+
+      <div class="highlight">
+        Además, cuenta con puntos de venta físicos en ciudades clave, combinando lo tradicional con lo digital para llegar a todos los bolivianos.
+      </div>
+
+      <p>
+        El desarrollo de las <strong>tecnologías de la información y comunicación (TIC)</strong> ha transformado radicalmente el panorama económico en Bolivia. Según datos de la Agencia de Gobierno Electrónico y Tecnologías de Información y Comunicación (AGETIC), el acceso a internet ha crecido un 12% anual, alcanzando al 68% de la población en 2023. Este auge ha impulsado el comercio electrónico, que pasó de representar solo el 9% de las compras en línea en 2019 a un crecimiento explosivo durante la pandemia de COVID-19, con un aumento del 150% en ventas digitales en 2021.
+      </p>
+
+      <p>
+        Sin embargo, este avance no está exento de desafíos. En años anteriores, la venta de entradas se realizaba principalmente de forma presencial, generando largas filas, errores humanos y pérdidas económicas. Con el surgimiento del comercio electrónico, surgieron soluciones que facilitan la compra de boletos, el control de aforo mediante códigos QR y la validación en tiempo real. SuperTicket.bo ha sido pionera en este rubro, posicionándose como una de las plataformas líderes en Bolivia.
+      </p>
+
+      <p>
+        El presente proyecto tiene como finalidad <strong>analizar y diseñar un sistema de información optimizado</strong> basado en SuperTicket.bo, que mejore los procesos de venta, control y administración de entradas. A través de este estudio, se busca identificar las limitaciones actuales —como la falta de automatización total y la escasa comunicación entre organizadores y compradores— y proponer soluciones innovadoras que garanticen eficiencia, seguridad y una experiencia superior para los usuarios.
+      </p>
+
+      <p style="text-align: center; font-size: 1.2rem; color: #1e3a8a; font-weight: 600; margin-top: 40px;">
+        SuperTicket.bo no es solo una plataforma de ticketing; es un ejemplo de cómo la tecnología puede democratizar el acceso a la cultura en Bolivia.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperTicket.bo - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

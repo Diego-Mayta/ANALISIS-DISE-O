@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Acontecimientos - SuperTicket.bo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    .lista-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fffde7 0%, #ffffff 70%);
+      padding: 80px 20px;
+    }
+
+    .lista-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      padding: 60px 70px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+      border: 1px solid #fff176;
+      position: relative;
+    }
+
+    .lista-container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 10px;
+      background: linear-gradient(to right, #f57f17, #fbc02d, #ffca28, #ffd54f);
+      border-radius: 24px 24px 0 0;
+    }
+
+    .lista-container h2 {
+      font-size: 2.8rem;
+      color: #f57f17;
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 800;
+    }
+
+    .lista-container h2::after {
+      content: "";
+      display: block;
+      width: 160px;
+      height: 6px;
+      background: #fbc02d;
+      margin: 20px auto 0;
+      border-radius: 3px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 40px 0;
+      font-size: 1.1rem;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(251,192,45,0.2);
+    }
+
+    thead {
+      background: linear-gradient(135deg, #fbc02d, #ffca28);
+      color: #fff;
+    }
+
+    th {
+      padding: 20px;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    td {
+      padding: 18px 20px;
+      text-align: left;
+      border-bottom: 1px solid #fff9e9e9e33;
+      vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #fffde7;
+    }
+
+    tbody tr:hover {
+      background: #fff9c4;
+      transform: scale(1.01);
+      box-shadow: 0 8px 25px rgba(251,192,45,0.3);
+    }
+
+    .evento-id {
+      font-weight: bold;
+      color: #e65100;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .tipo-entrada, .tipo-salida {
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .tipo-entrada {
+      background: #e8f5e8;
+      color: #2e7d32;
+    }
+
+    .tipo-salida {
+      background: #ffebee;
+      color: #c62828;
+    }
+
+    .descripcion {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .nota-final {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px;
+      background: linear-gradient(135deg, #fff9c4, #fff59d);
+      border-radius: 16px;
+      font-size: 1.2rem;
+      color: #e65100;
+      font-weight: 600;
+      border: 2px solid #ffca28;
+    }
+
+    @media (max-width: 768px) {
+      .lista-container { padding: 40px 20px; margin: 20px; }
+      .lista-container h2 { font-size: 2.2rem; }
+      table { font-size: 1rem; }
+      th, td { padding: 12px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logoTiket.png" alt="Logo del sitio">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+
+        <!-- GENERALIDADES (lo dejé tal cual, funciona perfecto) -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Generalidades <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu simple">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="antecedentes.html">Antecedentes</a></li>
+            <li><a href="planteamientoProblema.html">Planteamiento del Problema</a></li>
+            <li><a href="arbolProblemas.html">Árbol de Problemas</a></li>
+            <li><a href="formulacionProblema.html">Formulación del Problema</a></li>
+            <li><a href="propocitoEstudio.html">Propósito del Estudio</a></li>
+            <li><a href="metodos.html">Método, Medios e Instrumentos</a></li>
+            <li><a href="planificacionActividades.html">Planificación de Actividades</a></li>
+          </ul>
+        </li>
+
+        <!-- ANÁLISIS ESTRUCTURADO → AHORA ES PIXEL PERFECT CON TU FOTO -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Análisis Estructurado <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu mega">
+            <!-- Título principal -->
+            <li class="mega-title">Análisis y Diseño Estructurado</li>
+
+            <!-- MODELO AMBIENTAL (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO AMBIENTAL</span>
+            </li>
+            <li><a href="declaracionPropocitos.html">Declaración de Propósitos</a></li>
+            <li><a href="diagrama.html">Diagrama Contexto</a></li>
+            <li><a href="acontesimiento.html">Lista de Acontecimientos</a></li>
+
+            <!-- MODELO COMPORTAMIENTO (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO COMPORTAMIENTO</span>
+            </li>
+            <li><a href="flujoDatos.html">Diagrama de Flujo de Datos (DFD)</a></li>
+            <li><a href="entidadRelacio.html">Diagrama Entidad Relación (DER)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="orientadoObejeto.html">Orientado a Objetos</a></li>
+        <li><a href="video.html">Video Tutorial</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="lista-page">
+    <div class="lista-container">
+      <h2>Lista de Acontecimientos</h2>
+
+      <p style="text-align:center; font-size:1.3rem; color:#bf360c; margin-bottom:50px;">
+        Relación de todos los flujos de información entre el sistema SuperTicket.bo y las entidades externas identificadas en el Diagrama de Contexto.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>N°</th>
+            <th>Evento / Flujo</th>
+            <th>Origen</th>
+            <th>Destino</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="evento-id">E01</td>
+            <td>Registro de nuevo evento</td>
+            <td>Organizador</td>
+            <td>Sistema</td>
+            <td class="tipo-entrada">Entrada</td>
+            <td>El organizador ingresa datos del evento: nombre, fecha, lugar, precios, aforo, imagen, etc.</td>
+          </tr>
+          <tr>
+            <td class="evento-id">E02</td>
+            <td>Confirmación de evento creado</td>
+            <td>Sistema</td>
+            <td>Organizador</td>
+            <td class="tipo-salida">Salida</td>
+            <td>El sistema confirma que el evento ha sido registrado correctamente.</td>
+          </tr>
+          <tr>
+            <td class="evento-id">E03</td>
+            <td>Solicitud de compra de entrada</td>
+            <td>Cliente</td>
+            <td>Sistema</td>
+            <td class="tipo-entrada">Entrada</td>
+            <td>El cliente selecciona evento, cantidad y tipo de entrada.</td>
+          </tr>
+          <tr>
+            <td class="evento-id">E04</td>
+            <td>Solicitud de pago</td>
+            <td>Sistema</td>
+            <td>Pasarela de Pago</td>
+            <td class="tipo-salida">Salida</td>
+            <td>Envío de datos de transacción a la pasarela (tarjeta, QR, etc.).</td>
+          </tr>
+          <tr>
+            <td class="evento-id">E05</td>
+            <td>Confirmación de pago</td>
+            <td>Pasarela de Pago</td>
+            <td>Sistema</td>
+            <td class="tipo-entrada">Entrada</td>
+            <td>La pasarela notifica que el pago fue aprobado.</td>
+          </tr>
+          <tr>
+            <td class="evento-id">E06</td>
+            <td>Envío de entrada digital</td>
+            <td>Sistema</td>
+            <td>Servicio de Correo</td>
+            <td class="tipo-salida">Salida</td>
+            <td>Se genera PDF con código QR y se envía al cliente.</td>
+          </tr>
+          <tr>
+            <td class="evento-id">E07</td>
+            <td>Confirmación de entrega</td>
+            <td>Servicio de Correo</td>
+            <td>Sistema</td>
+            <td class="tipo-entrada">Entrada</td>
+            <td>Notificación de que el correo fue enviado exitosamente.</td>
+          </tr>
+          <tr>
+            <td class="evento-id">E08</td>
+            <td>Consulta de reporte de ventas</td>
+            <td>Organizador</td>
+            <td>Sistema</td>
+            <td class="tipo-entrada">Entrada</td>
+            <td>Solicitud de estadísticas y reportes del evento.</td>
+          </tr>
+          <tr>
+            <td class="evento-id">E09</td>
+            <td>Envío de reporte</td>
+            <td>Sistema</td>
+            <td>Organizador</td>
+            <td class="tipo-salida">Salida</td>
+            <td>El sistema entrega reporte en formato PDF o pantalla.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="nota-final">
+        La Lista de Acontecimientos constituye la base para la descomposición funcional del sistema 
+        y el posterior desarrollo de los Diagramas de Flujo de Datos (DFD) de nivel 0 y 1.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperTicket.bo - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

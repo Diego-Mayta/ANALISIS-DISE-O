@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagrama de Contexto - SuperTicket.bo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    .contexto-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #e8eaf6 0%, #ffffff 70%);
+      padding: 80px 20px;
+    }
+
+    .contexto-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      padding: 60px 70px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+      border: 1px solid #c5cae9;
+      position: relative;
+    }
+
+    .contexto-container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 10px;
+      background: linear-gradient(to right, #3949ab, #3f51b5, #5c6bc0, #7986cb);
+      border-radius: 24px 24px 0 0;
+    }
+
+    .contexto-container h2 {
+      font-size: 2.8rem;
+      color: #283593;
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 800;
+    }
+
+    .contexto-container h2::after {
+      content: "";
+      display: block;
+      width: 160px;
+      height: 6px;
+      background: #3f51b5;
+      margin: 20px auto 0;
+      border-radius: 3px;
+    }
+
+    .diagrama-wrapper {
+      text-align: center;
+      background: #f5f7ff;
+      padding: 50px 30px;
+      border-radius: 20px;
+      border: 4px dashed #7986cb;
+      margin: 40px 0;
+      box-shadow: 0 15px 40px rgba(63,81,181,0.15);
+    }
+
+    .diagrama-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    .entidades {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 60px 0;
+    }
+
+    .entidad {
+      background: linear-gradient(135deg, #e8eaf6, #c5cae9);
+      padding: 25px;
+      border-radius: 16px;
+      text-align: center;
+      border: 2px solid #9fa8da;
+      transition: all 0.3s;
+    }
+
+    .entidad:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(63,81,181,0.25);
+      border-color: #3f51b5;
+    }
+
+    .entidad i {
+      font-size: 2.5rem;
+      color: #3949ab;
+      margin-bottom: 15px;
+    }
+
+    .entidad h4 {
+      color: #1a237e;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .nota {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #3949ab;
+      font-weight: 600;
+      margin-top: 50px;
+      padding: 20px;
+      background: #e8eaf6;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .contexto-container { padding: 40px 25px; margin: 20px; }
+      .contexto-container h2 { font-size: 2.2rem; }
+      .diagrama-wrapper { padding: 30px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logoTiket.png" alt="Logo del sitio">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+
+        <!-- GENERALIDADES (lo dejé tal cual, funciona perfecto) -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Generalidades <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu simple">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="antecedentes.html">Antecedentes</a></li>
+            <li><a href="planteamientoProblema.html">Planteamiento del Problema</a></li>
+            <li><a href="arbolProblemas.html">Árbol de Problemas</a></li>
+            <li><a href="formulacionProblema.html">Formulación del Problema</a></li>
+            <li><a href="propocitoEstudio.html">Propósito del Estudio</a></li>
+            <li><a href="metodos.html">Método, Medios e Instrumentos</a></li>
+            <li><a href="planificacionActividades.html">Planificación de Actividades</a></li>
+          </ul>
+        </li>
+
+        <!-- ANÁLISIS ESTRUCTURADO → AHORA ES PIXEL PERFECT CON TU FOTO -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Análisis Estructurado <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu mega">
+            <!-- Título principal -->
+            <li class="mega-title">Análisis y Diseño Estructurado</li>
+
+            <!-- MODELO AMBIENTAL (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO AMBIENTAL</span>
+            </li>
+            <li><a href="declaracionPropocitos.html">Declaración de Propósitos</a></li>
+            <li><a href="diagrama.html">Diagrama Contexto</a></li>
+            <li><a href="acontesimiento.html">Lista de Acontecimientos</a></li>
+
+            <!-- MODELO COMPORTAMIENTO (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO COMPORTAMIENTO</span>
+            </li>
+            <li><a href="flujoDatos.html">Diagrama de Flujo de Datos (DFD)</a></li>
+            <li><a href="entidadRelacio.html">Diagrama Entidad Relación (DER)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="orientadoObejeto.html">Orientado a Objetos</a></li>
+        <li><a href="video.html">Video Tutorial</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contexto">
+    <div class="contexto-container">
+      <h2>Diagrama de Contexto</h2>
+
+      <p style="text-align:center; font-size:1.3rem; color:#283593; margin-bottom:40px;">
+        El Diagrama de Contexto representa la visión global del sistema SuperTicket.bo, 
+        mostrando las entidades externas que interactúan con él y los flujos de información principales.
+      </p>
+
+      <div class="diagrama-wrapper">
+        <!-- REEMPLAZA "contexto.png" POR EL NOMBRE REAL DE TU IMAGEN -->
+        <img src="img/diagramaContexto.png" alt="Diagrama de Contexto - SuperTicket.bo">
+      </div>
+
+      <div class="entidades">
+        <div class="entidad">
+          <i class="fas fa-user-tie"></i>
+          <h4>Organizador de Eventos</h4>
+          <p>Crea eventos, configura precios y recibe reportes de ventas</p>
+        </div>
+        <div class="entidad">
+          <i class="fas fa-users"></i>
+          <h4>Cliente / Asistente</h4>
+          <p>Busca eventos, compra entradas y recibe boletos digitales</p>
+        </div>
+        <div class="entidad">
+          <i class="fas fa-university"></i>
+          <h4>Pasarela de Pago</h4>
+          <p>Procesamiento seguro de pagos (tarjetas, QR, billeteras)</p>
+        </div>
+        <div class="entidad">
+          <i class="fas fa-envelope"></i>
+          <h4>Servicio de Correo</h4>
+          <p>Envío automático de entradas y notificaciones</p>
+        </div>
+      </div>
+
+      <div class="nota">
+        Este diagrama establece los límites del sistema y sirve como punto de partida 
+        para el desarrollo de los Diagramas de Flujo de Datos (DFD) de niveles inferiores.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperTicket.bo - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

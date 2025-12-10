@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propósito del Estudio - SuperTicket.bo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    .proposito-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f3e5f5 0%, #ffffff 70%);
+      padding: 80px 20px;
+    }
+
+    .proposito-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      padding: 60px 70px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+      border: 1px solid #e1bee7;
+      position: relative;
+    }
+
+    .proposito-container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 8px;
+      background: linear-gradient(to right, #9c27b0, #ba68c8, #e1bee7);
+    }
+
+    .proposito-container h2 {
+      font-size: 2.8rem;
+      color: #7b1fa2;
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 800;
+    }
+
+    .objetivo-general {
+      background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 1.7;
+      color: #4a148c;
+      font-weight: 600;
+      margin: 60px 0;
+      border: 3px solid #ba68c8;
+      box-shadow: 0 15px 40px rgba(156,39,176,0.2);
+    }
+
+    .objetivo-general strong {
+      font-size: 1.75rem;
+      display: block;
+      margin-bottom: 15px;
+      color: #6a1b9a;
+    }
+
+    .objetivos-especificos {
+      background: #faf2fc;
+      padding: 40px;
+      border-radius: 20px;
+      border-left: 8px solid #ab47bc;
+      margin: 60px 0;
+    }
+
+    .objetivos-especificos h3 {
+      color: #8e24aa;
+      font-size: 1.6rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .objetivos-especificos ul {
+      list-style: none;
+      counter-reset: item;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .objetivos-especificos li {
+      counter-increment: item;
+      margin: 22px 0;
+      padding-left: 50px;
+      position: relative;
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    .objetivos-especificos li::before {
+      content: counter(item);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 36px;
+      height: 36px;
+      background: #9c27b0;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .proposito-container { padding: 40px 25px; margin: 20px; }
+      .proposito-container h2 { font-size: 2.2rem; }
+      .objetivo-general { font-size: 1.35rem; padding: 30px 20px; }
+      .objetivo-general strong { font-size: 1.55rem; }
+      .objetivos-especificos li { padding-left: 45px; font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logoTiket.png" alt="Logo del sitio">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+
+        <!-- GENERALIDADES (lo dejé tal cual, funciona perfecto) -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Generalidades <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu simple">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="antecedentes.html">Antecedentes</a></li>
+            <li><a href="planteamientoProblema.html">Planteamiento del Problema</a></li>
+            <li><a href="arbolProblemas.html">Árbol de Problemas</a></li>
+            <li><a href="formulacionProblema.html">Formulación del Problema</a></li>
+            <li><a href="propocitoEstudio.html">Propósito del Estudio</a></li>
+            <li><a href="metodos.html">Método, Medios e Instrumentos</a></li>
+            <li><a href="planificacionActividades.html">Planificación de Actividades</a></li>
+          </ul>
+        </li>
+
+        <!-- ANÁLISIS ESTRUCTURADO → AHORA ES PIXEL PERFECT CON TU FOTO -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Análisis Estructurado <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu mega">
+            <!-- Título principal -->
+            <li class="mega-title">Análisis y Diseño Estructurado</li>
+
+            <!-- MODELO AMBIENTAL (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO AMBIENTAL</span>
+            </li>
+            <li><a href="declaracionPropocitos.html">Declaración de Propósitos</a></li>
+            <li><a href="diagrama.html">Diagrama Contexto</a></li>
+            <li><a href="acontesimiento.html">Lista de Acontecimientos</a></li>
+
+            <!-- MODELO COMPORTAMIENTO (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO COMPORTAMIENTO</span>
+            </li>
+            <li><a href="flujoDatos.html">Diagrama de Flujo de Datos (DFD)</a></li>
+            <li><a href="entidadRelacio.html">Diagrama Entidad Relación (DER)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="orientadoObejeto.html">Orientado a Objetos</a></li>
+        <li><a href="video.html">Video Tutorial</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="proposito-page">
+    <div class="proposito-container">
+      <h2>Propósito del Estudio</h2>
+
+      <div class="objetivo-general">
+        <strong>Objetivo General</strong>
+        Diseñar un sistema de información optimizado que permita la venta, control y administración de entradas en línea a través de la plataforma SuperTicket.bo, mejorando la eficiencia operativa, la seguridad de las transacciones y la experiencia de usuario tanto para organizadores de eventos como para los asistentes.
+      </div>
+
+      <div class="objetivos-especificos">
+        <h3>Objetivos Específicos</h3>
+        <ul>
+          <li>Analizar exhaustivamente los procesos actuales de compra, validación y administración de entradas en SuperTicket.bo.</li>
+          <li>Identificar y documentar los requerimientos funcionales y no funcionales del sistema mejorado.</li>
+          <li>Modelar el sistema mediante técnicas estructuradas (DFD, DER, diccionario de datos) y orientadas a objetos (diagramas UML).</li>
+          <li>Diseñar una base de datos relacional robusta y escalable que soporte grandes volúmenes de transacciones.</li>
+          <li>Proponer mecanismos avanzados de seguridad para pagos electrónicos y validación de entradas mediante códigos QR dinámicos.</li>
+          <li>Desarrollar interfaces de usuario intuitivas y responsive que mejoren la usabilidad en dispositivos móviles y escritorio.</li>
+          <li>Implementar reportes en tiempo real y herramientas de analítica para organizadores de eventos.</li>
+          <li>Elaborar un prototipo funcional que demuestre la viabilidad técnica de las mejoras propuestas.</li>
+        </ul>
+      </div>
+
+      <p style="text-align:center; font-size:1.25rem; color:#6a1b9a; font-weight:600; margin-top:60px;">
+        El logro de estos objetivos permitirá transformar SuperTicket.bo en una plataforma más eficiente, segura y competitiva, 
+        consolidando su liderazgo en el mercado boliviano de ticketing digital.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperTicket.bo - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

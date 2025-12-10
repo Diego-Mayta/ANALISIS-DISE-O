@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Método, Medios e Instrumentos - SuperTicket.bo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    .metodo-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #e0f2f1 0%, #ffffff 70%);
+      padding: 80px 20px;
+    }
+
+    .metodo-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      padding: 60px 70px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+      border: 1px solid #80cbc4;
+    }
+
+    .metodo-container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 8px;
+      background: linear-gradient(to right, #00695c, #009688, #4db6ac);
+      border-radius: 24px 24px 0 0;
+    }
+
+    .metodo-container h2 {
+      font-size: 2.8rem;
+      color: #00695c;
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 800;
+      position: relative;
+    }
+
+    .metodo-container h2::after {
+      content: "";
+      display: block;
+      width: 140px;
+      height: 5px;
+      background: #009688;
+      margin: 20px auto 0;
+      border-radius: 3px;
+    }
+
+    .metodologia {
+      background: linear-gradient(135deg, #e0f2f1, #b2dfdb);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #004d40;
+      font-weight: 600;
+      margin: 60px 0;
+      border: 3px solid #26a69a;
+      box-shadow: 0 15px 40px rgba(0,150,136,0.2);
+    }
+
+    .secciones {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 35px;
+      margin: 60px 0;
+    }
+
+    .seccion {
+      background: #f5fffa;
+      padding: 30px;
+      border-radius: 16px;
+      border-left: 8px solid #00897b;
+      box-shadow: 0 10px 30px rgba(0,137,123,0.1);
+      transition: transform 0.3s;
+    }
+
+    .seccion:hover {
+      transform: translateY(-8px);
+    }
+
+    .seccion h3 {
+      color: #00695c;
+      margin-bottom: 18px;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .seccion ul {
+      padding-left: 20px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #004d40;
+    }
+
+    .seccion li {
+      margin: 12px 0;
+    }
+
+    @media (max-width: 768px) {
+      .metodo-container { padding: 40px 25px; margin: 20px; }
+      .metodo-container h2 { font-size: 2.2rem; }
+      .metodologia { font-size: 1.35rem; padding: 30px 20px; }
+      .secciones { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logoTiket.png" alt="Logo del sitio">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+
+        <!-- GENERALIDADES (lo dejé tal cual, funciona perfecto) -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Generalidades <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu simple">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="antecedentes.html">Antecedentes</a></li>
+            <li><a href="planteamientoProblema.html">Planteamiento del Problema</a></li>
+            <li><a href="arbolProblemas.html">Árbol de Problemas</a></li>
+            <li><a href="formulacionProblema.html">Formulación del Problema</a></li>
+            <li><a href="propocitoEstudio.html">Propósito del Estudio</a></li>
+            <li><a href="metodos.html">Método, Medios e Instrumentos</a></li>
+            <li><a href="planificacionActividades.html">Planificación de Actividades</a></li>
+          </ul>
+        </li>
+
+        <!-- ANÁLISIS ESTRUCTURADO → AHORA ES PIXEL PERFECT CON TU FOTO -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Análisis Estructurado <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu mega">
+            <!-- Título principal -->
+            <li class="mega-title">Análisis y Diseño Estructurado</li>
+
+            <!-- MODELO AMBIENTAL (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO AMBIENTAL</span>
+            </li>
+            <li><a href="declaracionPropocitos.html">Declaración de Propósitos</a></li>
+            <li><a href="diagrama.html">Diagrama Contexto</a></li>
+            <li><a href="acontesimiento.html">Lista de Acontecimientos</a></li>
+
+            <!-- MODELO COMPORTAMIENTO (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO COMPORTAMIENTO</span>
+            </li>
+            <li><a href="flujoDatos.html">Diagrama de Flujo de Datos (DFD)</a></li>
+            <li><a href="entidadRelacio.html">Diagrama Entidad Relación (DER)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="orientadoObejeto.html">Orientado a Objetos</a></li>
+        <li><a href="video.html">Video Tutorial</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="metodo-page">
+    <div class="metodo-container">
+      <h2>Método, Medios e Instrumentos de Investigación</h2>
+
+      <div class="metodologia">
+        El estudio se realiza bajo el enfoque <strong>analítico-descriptivo</strong> con orientación aplicada, 
+        combinando investigación documental, observación directa y análisis de requerimientos del sistema actual de SuperTicket.bo.
+      </div>
+
+      <div class="secciones">
+        <div class="seccion">
+          <h3>Metodología</h3>
+          <ul>
+            <li>Método analítico-descriptivo</li>
+            <li>Enfoque cuantitativo-cualitativo mixto</li>
+            <li>Investigación aplicada</li>
+            <li>Diseño no experimental transversal</li>
+            <li>Análisis de sistema existente (SuperTicket.bo)</li>
+          </ul>
+        </div>
+
+        <div class="seccion">
+          <h3>Medios de Investigación</h3>
+          <ul>
+            <li>Revisión bibliográfica y documental</li>
+            <li>Observación directa del portal web y app móvil</li>
+            <li>Entrevistas semiestructuradas a usuarios y organizadores</li>
+            <li>Encuestas a clientes frecuentes</li>
+            <li>Análisis de métricas públicas de la plataforma</li>
+            <li>Estudio de casos similares (Ticketmaster, Eventbrite, etc.)</li>
+          </ul>
+        </div>
+
+        <div class="seccion">
+          <h3>Instrumentos</h3>
+          <ul>
+            <li>Guías de entrevista y cuestionarios</li>
+            <li>Fichas de observación</li>
+            <li>Herramientas de modelado: Lucidchart, Draw.io, StarUML</li>
+            <li>Diagramas estructurados (DFD, DER, Diccionario de datos)</li>
+            <li>Diagramas UML (casos de uso, clases, secuencia)</li>
+            <li>Prototipo en Figma / Adobe XD</li>
+            <li>Base de datos MySQL / PostgreSQL</li>
+          </ul>
+        </div>
+
+        <div class="seccion">
+          <h3>Técnicas de Recolección</h3>
+          <ul>
+            <li>Observación participante</li>
+            <li>Entrevistas en profundidad</li>
+            <li>Encuestas digitales (Google Forms)</li>
+            <li>Análisis de contenido web</li>
+            <li>Benchmarking de plataformas competidoras</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="text-align:center; font-size:1.25rem; color:#004d40; font-weight:600; margin-top:60px;">
+        La combinación de estas técnicas y herramientas garantiza un análisis riguroso, objetivo y completo del sistema actual, 
+        permitiendo proponer soluciones técnicas viables y alineadas con las necesidades reales de los usuarios.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperTicket.bo - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

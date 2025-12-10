@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagrama de Flujo de Datos - SuperTicket.bo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    .dfd-page { min-height: 100vh; background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 70%); padding: 80px 20px; }
+    .dfd-container {
+      max-width: 1250px; margin: 0 auto; background: white; border-radius: 24px;
+      padding: 60px 70px; box-shadow: 0 25px 70px rgba(0,0,0,0.15); border: 1px solid #80deea;
+      position: relative;
+    }
+    .dfd-container::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 12px;
+      background: linear-gradient(to right, #006064, #00838f, #0097a7, #00bcd4);
+      border-radius: 24px 24px 0 0;
+    }
+    .dfd-container h2 {
+      font-size: 2.8rem; color: #006064; text-align: center; margin-bottom: 50px; font-weight: 800;
+    }
+    .dfd-container h2::after {
+      content: ""; display: block; width: 180px; height: 6px; background: #0097a7;
+      margin: 20px auto 0; border-radius: 3px;
+    }
+
+    .nivel {
+      margin-bottom: 100px;
+    }
+    .nivel h3 {
+      font-size: 2.2rem; color: #004d40; text-align: center; margin-bottom: 30px;
+      background: #e0f7fa; padding: 15px; border-radius: 12px;
+    }
+
+    .diagrama {
+      text-align: center; background: #e8fcfd; padding: 40px;
+      border-radius: 20px; border: 4px dashed #00acc1; margin: 30px 0;
+      box-shadow: 0 15px 40px rgba(0,172,193,0.2);
+    }
+    .diagrama img {
+      max-width: 100%; height: auto; border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+
+    .nota {
+      text-align: center; font-size: 1.25rem; color: #004d40; font-weight: 600;
+      margin: 40px 0; padding: 20px; background: #e0f7fa; border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .dfd-container { padding: 40px 20px; margin: 20px; }
+      .dfd-container h2, .nivel h3 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logoTiket.png" alt="Logo del sitio">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+
+        <!-- GENERALIDADES (lo dejé tal cual, funciona perfecto) -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Generalidades <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu simple">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="antecedentes.html">Antecedentes</a></li>
+            <li><a href="planteamientoProblema.html">Planteamiento del Problema</a></li>
+            <li><a href="arbolProblemas.html">Árbol de Problemas</a></li>
+            <li><a href="formulacionProblema.html">Formulación del Problema</a></li>
+            <li><a href="propocitoEstudio.html">Propósito del Estudio</a></li>
+            <li><a href="metodos.html">Método, Medios e Instrumentos</a></li>
+            <li><a href="planificacionActividades.html">Planificación de Actividades</a></li>
+          </ul>
+        </li>
+
+        <!-- ANÁLISIS ESTRUCTURADO → AHORA ES PIXEL PERFECT CON TU FOTO -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Análisis Estructurado <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu mega">
+            <!-- Título principal -->
+            <li class="mega-title">Análisis y Diseño Estructurado</li>
+
+            <!-- MODELO AMBIENTAL (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO AMBIENTAL</span>
+            </li>
+            <li><a href="declaracionPropocitos.html">Declaración de Propósitos</a></li>
+            <li><a href="diagrama.html">Diagrama Contexto</a></li>
+            <li><a href="acontesimiento.html">Lista de Acontecimientos</a></li>
+
+            <!-- MODELO COMPORTAMIENTO (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO COMPORTAMIENTO</span>
+            </li>
+            <li><a href="flujoDatos.html">Diagrama de Flujo de Datos (DFD)</a></li>
+            <li><a href="entidadRelacio.html">Diagrama Entidad Relación (DER)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="orientadoObejeto.html">Orientado a Objetos</a></li>
+        <li><a href="video.html">Video Tutorial</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dfd-page">
+    <div class="dfd-container">
+      <h2>Diagrama de Flujo de Datos (DFD)</h2>
+
+      <!-- NIVEL 0 -->
+      <div class="nivel">
+        <h3>DFD Nivel 0 - Visión General del Sistema</h3>
+        <div class="diagrama">
+          <!-- CAMBIA EL NOMBRE SI TU IMAGEN SE LLAMA DIFERENTE -->
+          <img src="img/diagramaNivel0.png" alt="DFD Nivel 0">
+        </div>
+        <p class="nota">
+          Representa el sistema como un único proceso principal que interactúa con todas las entidades externas.
+        </p>
+      </div>
+
+      <!-- NIVEL 1 -->
+      <div class="nivel">
+        <h3>DFD Nivel 1 - Descomposición del Proceso Principal</h3>
+          <p class="nota">
+          Descompone el proceso principal en 5 subprocesos: Gestión de Eventos, Registro de Usuarios, Procesamiento de Compras, Control de Pagos y Generación de Reportes.
+        </p>
+        <div class="diagrama">
+          <img src="img/diagramaNivel1.png" alt="DFD Nivel 1">
+        </div>
+      
+      </div>
+      <div class="nivel">
+        <h3>DFD Nivel 1 </h3>
+        <div class="diagrama">
+          <img src="img/nivel1segundo.jpeg" alt="DFD Nivel 1">
+        </div>
+        
+      </div>
+      <div class="nivel">
+        <h3>DFD Nivel 1 </h3>
+        <div class="diagrama">
+          <img src="img/nivel1tercero.jpeg" alt="DFD Nivel 1">
+        </div>
+        
+   
+    </div>
+      <div class="nivel">
+        <h3>DFD Nivel 2 </h3>
+        <div class="diagrama">
+          <img src="img/nivel2.jpeg" alt="DFD Nivel 2">
+        </div>
+        
+      </div>
+
+
+
+      <p style="text-align:center; font-size:1.3rem; color:#004d40; margin-top:80px;">
+        Los DFD forman parte del Modelo de Comportamiento y son fundamentales para el diseño posterior de la base de datos y las interfaces del sistema.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperTicket.bo - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagrama Entidad Relación (DER) - SuperTicket.bo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    .der-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ede7f6 0%, #ffffff 70%);
+      padding: 80px 20px;
+    }
+    .der-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 28px;
+      padding: 70px 80px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0,0.18);
+      border: 1px solid #b39ddb;
+      position: relative;
+    }
+    .der-container::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 14px;
+      background: linear-gradient(to right, #6a1b9a, #7b1fa2, #8e24aa, #9c27b0, #ab47bc);
+      border-radius: 28px 28px 0 0;
+    }
+    .der-container h2 {
+      font-size: 3rem; color: #4a148c; text-align: center; margin-bottom: 60px; font-weight: 900;
+    }
+    .der-container h2::after {
+      content: ""; display: block; width: 200px; height: 7px; background: #8e24aa;
+      margin: 25px auto 0; border-radius: 4px;
+    }
+
+    .diagrama-der {
+      text-align: center;
+      background: #f5f0ff;
+      padding: 60px 40px;
+      border-radius: 24px;
+      border: 6px dashed #ab47bc;
+      margin: 60px 0;
+      box-shadow: 0 25px 60px rgba(142,36,170,0.25);
+    }
+    .diagrama-der img {
+      max-width: 100%; height: auto; border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    }
+
+    .entidades-resumen {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(minmax(280px, 1fr)));
+      gap: 30px;
+      margin: 70px 0;
+    }
+    .entidad-card {
+      background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+      border: 2px solid #ce93d8;
+      transition: all 0.4s;
+    }
+    .entidad-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 45px rgba(156,100,200,0.3);
+      border-color: #9c27b0;
+    }
+    .entidad-card i { font-size: 3rem; color: #7b1fa2; margin-bottom: 15px; }
+    .entidad-card h4 { color: #4a148c; font-size: 1.4rem; margin-bottom: 10px; }
+
+    .nota-final {
+      text-align: center;
+      font-size: 1.35rem;
+      color: #4a148c;
+      font-weight: 700;
+      padding: 35px;
+      background: linear-gradient(135deg, #f3e5f5, #e8daf5);
+      border-radius: 20px;
+      border: 3px solid #ba68c8;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .der-container { padding: 50px 25px; margin: 20px; }
+      .der-container h2 { font-size: 2.3rem; }
+      .diagrama-der { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logoTiket.png" alt="Logo del sitio">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+
+        <!-- GENERALIDADES (lo dejé tal cual, funciona perfecto) -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Generalidades <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu simple">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="antecedentes.html">Antecedentes</a></li>
+            <li><a href="planteamientoProblema.html">Planteamiento del Problema</a></li>
+            <li><a href="arbolProblemas.html">Árbol de Problemas</a></li>
+            <li><a href="formulacionProblema.html">Formulación del Problema</a></li>
+            <li><a href="propocitoEstudio.html">Propósito del Estudio</a></li>
+            <li><a href="metodos.html">Método, Medios e Instrumentos</a></li>
+            <li><a href="planificacionActividades.html">Planificación de Actividades</a></li>
+          </ul>
+        </li>
+
+        <!-- ANÁLISIS ESTRUCTURADO → AHORA ES PIXEL PERFECT CON TU FOTO -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Análisis Estructurado <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu mega">
+            <!-- Título principal -->
+            <li class="mega-title">Análisis y Diseño Estructurado</li>
+
+            <!-- MODELO AMBIENTAL (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO AMBIENTAL</span>
+            </li>
+            <li><a href="declaracionPropocitos.html">Declaración de Propósitos</a></li>
+            <li><a href="diagrama.html">Diagrama Contexto</a></li>
+            <li><a href="acontesimiento.html">Lista de Acontecimientos</a></li>
+
+            <!-- MODELO COMPORTAMIENTO (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO COMPORTAMIENTO</span>
+            </li>
+            <li><a href="flujoDatos.html">Diagrama de Flujo de Datos (DFD)</a></li>
+            <li><a href="entidadRelacio.html">Diagrama Entidad Relación (DER)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="orientadoObejeto.html">Orientado a Objetos</a></li>
+        <li><a href="video.html">Video Tutorial</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="der-page">
+    <div class="der-container">
+      <h2>Diagrama Entidad Relación (DER)</h2>
+
+      <p style="text-align:center; font-size:1.35rem; color:#4a148c; margin-bottom:50px;">
+        Modelo conceptual de la base de datos del sistema SuperTicket.bo, 
+        identificando entidades, atributos y relaciones cardinales.
+      </p>
+
+      <div class="diagrama-der">
+        <!-- CAMBIA "der.png" POR EL NOMBRE REAL DE TU IMAGEN -->
+        <img src="img/entidadRelacion.png" alt="Diagrama Entidad Relación - SuperTicket.bo">
+      </div>
+
+      <div class="entidades-resumen">
+        <div class="entidad-card">
+          <i class="fas fa-user"></i>
+          <h4>Usuario / Cliente</h4>
+          <p>Personas que compran entradas</p>
+        </div>
+        <div class="entidad-card">
+          <i class="fas fa-calendar-alt"></i>
+          <h4>Evento</h4>
+          <p>Conciertos, ferias, teatro, etc.</p>
+        </div>
+        <div class="entidad-card">
+          <i class="fas fa-user-tie"></i>
+          <h4>Organizador</h4>
+          <p>Encargado de crear eventos</p>
+        </div>
+        <div class="entidad-card">
+          <i class="fas fa-ticket-alt"></i>
+          <h4>Entrada</h4>
+          <p>Boletos vendidos con código QR</p>
+        </div>
+        <div class="entidad-card">
+          <i class="fas fa-credit-card"></i>
+          <h4>Pago</h4>
+          <p>Transacciones realizadas</p>
+        </div>
+        <div class="entidad-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Lugar</h4>
+          <p>Recintos y ubicaciones</p>
+        </div>
+      </div>
+
+      <div class="nota-final>
+        Este DER sirve como base para la implementación física de la base de datos relacional 
+        y garantiza la integridad referencial en todas las operaciones del sistema.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperTicket.bo - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

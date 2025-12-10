@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planificación de Actividades - SuperTicket.bo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    .cronograma-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fff3e0 0%, #ffffff 70%);
+      padding: 80px 20px;
+    }
+
+    .cronograma-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      padding: 60px 70px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+      border: 1px solid #ffcc80;
+      position: relative;
+    }
+
+    .cronograma-container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 10px;
+      background: linear-gradient(to right, #ff6f00, #ffa000, #ffb300, #ffca28);
+      border-radius: 24px 24px 0 0;
+    }
+
+    .cronograma-container h2 {
+      font-size: 2.8rem;
+      color: #e65100;
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 800;
+    }
+
+    .cronograma-container h2::after {
+      content: "";
+      display: block;
+      width: 160px;
+      height: 6px;
+      background: #ff8f00;
+      margin: 20px auto 0;
+      border-radius: 3px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 50px 0;
+      font-size: 1.1rem;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(255,111,0,0.15);
+    }
+
+    thead {
+      background: linear-gradient(135deg, #ff8f00, #ffa726);
+      color: white;
+    }
+
+    th, td {
+      padding: 18px 20px;
+      text-align: center;
+      border-bottom: 1px solid #ffe0b2;
+    }
+
+    th {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    tbody tr {
+      transition: all 0.3s;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #fff8e1;
+    }
+
+    tbody tr:hover {
+      background: #ffecb3;
+      transform: scale(1.01);
+      box-shadow: 0 8px 20px rgba(255,152,0,0.2);
+    }
+
+    .fase {
+      font-weight: bold;
+      color: #e65100;
+      font-size: 1.3rem;
+    }
+
+    .duracion {
+      background: #fff3e0;
+      color: #e65100;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+
+    .producto {
+      color: #2e7d32;
+      font-weight: 600;
+    }
+
+    .nota-final {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #bf360c;
+      font-weight: 600;
+      margin-top: 50px;
+      padding: 25px;
+      background: #fff3e0;
+      border-radius: 16px;
+      border: 2px dashed #ff8a65;
+    }
+
+    @media (max-width: 768px) {
+      .cronograma-container { padding: 40px 20px; margin: 20px; }
+      .cronograma-container h2 { font-size: 2.2rem; }
+      table { font-size: 1rem; }
+      th, td { padding: 12px 10px; }
+      .fase { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logoTiket.png" alt="Logo del sitio">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+
+        <!-- GENERALIDADES (lo dejé tal cual, funciona perfecto) -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Generalidades <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu simple">
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="antecedentes.html">Antecedentes</a></li>
+            <li><a href="planteamientoProblema.html">Planteamiento del Problema</a></li>
+            <li><a href="arbolProblemas.html">Árbol de Problemas</a></li>
+            <li><a href="formulacionProblema.html">Formulación del Problema</a></li>
+            <li><a href="propocitoEstudio.html">Propósito del Estudio</a></li>
+            <li><a href="metodos.html">Método, Medios e Instrumentos</a></li>
+            <li><a href="planificacionActividades.html">Planificación de Actividades</a></li>
+          </ul>
+        </li>
+
+        <!-- ANÁLISIS ESTRUCTURADO → AHORA ES PIXEL PERFECT CON TU FOTO -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Análisis Estructurado <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu mega">
+            <!-- Título principal -->
+            <li class="mega-title">Análisis y Diseño Estructurado</li>
+
+            <!-- MODELO AMBIENTAL (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO AMBIENTAL</span>
+            </li>
+            <li><a href="declaracionPropocitos.html">Declaración de Propósitos</a></li>
+            <li><a href="diagrama.html">Diagrama Contexto</a></li>
+            <li><a href="acontesimiento.html">Lista de Acontecimientos</a></li>
+
+            <!-- MODELO COMPORTAMIENTO (solo título, no clicable) -->
+            <li class="section-header">
+              <span>MODELO COMPORTAMIENTO</span>
+            </li>
+            <li><a href="flujoDatos.html">Diagrama de Flujo de Datos (DFD)</a></li>
+            <li><a href="entidadRelacio.html">Diagrama Entidad Relación (DER)</a></li>
+          </ul>
+        </li>
+
+        <li><a href="orientadoObejeto.html">Orientado a Objetos</a></li>
+        <li><a href="video.html">Video Tutorial</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cronograma-page">
+    <div class="cronograma-container">
+      <h2>Planificación de Actividades</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Fase</th>
+            <th>Actividad</th>
+            <th>Duración</th>
+            <th>Producto Esperado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fase">1</td>
+            <td>Recolección de información y análisis del sistema actual SuperTicket.bo</td>
+            <td class="duracion">1 semana</td>
+            <td class="producto">Informe de diagnóstico</td>
+          </tr>
+          <tr>
+            <td class="fase">2</td>
+            <td>Identificación de actores y requerimientos funcionales/no funcionales</td>
+            <td class="duracion">1 semana</td>
+            <td class="producto">Lista de requerimientos</td>
+          </tr>
+          <tr>
+            <td class="fase">3</td>
+            <td>Elaboración del modelo ambiental y diagrama de contexto</td>
+            <td class="duracion">1 semana</td>
+            <td class="producto">Diagramas del entorno del sistema</td>
+          </tr>
+          <tr>
+            <td class="fase">4</td>
+            <td>Diseño del modelo entidad-relación (MER) y diccionario de datos</td>
+            <td class="duracion">2 semanas</td>
+            <td class="producto">Base de datos relacional diseñada</td>
+          </tr>
+          <tr>
+            <td class="fase">5</td>
+            <td>Diseño del sistema: pantallas, diagramas UML y prototipo</td>
+            <td class="duracion">2 semanas</td>
+            <td class="producto">Prototipo funcional del sistema</td>
+          </tr>
+          <tr>
+            <td class="fase">6</td>
+            <td>Redacción final del informe y preparación de defensa</td>
+            <td class="duracion">1 semana</td>
+            <td class="producto">Documento final de análisis y diseño</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="nota-final">
+        <p>Duración total del proyecto: <strong>8 semanas</strong><br>
+        Fecha estimada de entrega: <strong>15 de diciembre de 2025</strong></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperTicket.bo - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
