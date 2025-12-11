@@ -5,6 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos adicionales para la sección de contacto */
+    .contacto {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .contacto h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+      font-size: 2.2rem;
+    }
+    
+    .equipo-contacto {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .miembro {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 25px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .miembro:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    
+    .miembro-icono {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #4a6fa5;
+    }
+    
+    .miembro h3 {
+      margin: 10px 0 5px;
+      color: #333;
+    }
+    
+    .miembro p {
+      margin: 5px 0;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    
+    .miembro .rol {
+      font-weight: bold;
+      color: #4a6fa5;
+      margin-bottom: 10px;
+    }
+    
+    .formulario-contacto {
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .formulario-contacto h3 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+    
+    .formulario-contacto form {
+      display: grid;
+      gap: 20px;
+    }
+    
+    .formulario-contacto label {
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .formulario-contacto input,
+    .formulario-contacto textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    
+    .formulario-contacto button {
+      background: #4a6fa5;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+    
+    .formulario-contacto button:hover {
+      background: #3a5a8c;
+    }
+    
+    @media (max-width: 768px) {
+      .equipo-contacto {
+        gap: 20px;
+      }
+      
+      .miembro {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .formulario-contacto {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -15,7 +142,7 @@
       <ul>
         <li><a href="index.html" class="activo">Inicio</a></li>
 
-        <!-- GENERALIDADES (lo dejé tal cual, funciona perfecto) -->
+        <!-- GENERALIDADES -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle">Generalidades <span class="arrow">▼</span></a>
           <ul class="dropdown-menu simple">
@@ -30,14 +157,12 @@
           </ul>
         </li>
 
-        <!-- ANÁLISIS ESTRUCTURADO → AHORA ES PIXEL PERFECT CON TU FOTO -->
+        <!-- ANÁLISIS ESTRUCTURADO -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle">Análisis Estructurado <span class="arrow">▼</span></a>
           <ul class="dropdown-menu mega">
-            <!-- Título principal -->
             <li class="mega-title">Análisis y Diseño Estructurado</li>
 
-            <!-- MODELO AMBIENTAL (solo título, no clicable) -->
             <li class="section-header">
               <span>MODELO AMBIENTAL</span>
             </li>
@@ -45,7 +170,6 @@
             <li><a href="diagrama.html">Diagrama Contexto</a></li>
             <li><a href="acontesimiento.html">Lista de Acontecimientos</a></li>
 
-            <!-- MODELO COMPORTAMIENTO (solo título, no clicable) -->
             <li class="section-header">
               <span>MODELO COMPORTAMIENTO</span>
             </li>
@@ -60,24 +184,93 @@
       </ul>
     </nav>
   </header>
+  
   <section class="section contacto" id="contacto">
     <h2>Contáctanos</h2>
-    <form>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
+    
+    <!-- Información de los miembros del equipo -->
+    <div class="equipo-contacto">
+      <!-- Miembro 1 -->
+      <div class="miembro">
+        <div class="miembro-icono">👨‍💻</div>
+        <h3>Roy Michua Mamani</h3>
+        <p class="rol">Líder del Proyecto</p>
+        <p>rmichua1umsa.bo</p>
+        <p>+57 300 123 4567</p>
+      </div>
+      
+      <!-- Miembro 2 -->
+      <div class="miembro">
+        <div class="miembro-icono">👩‍💻</div>
+        <h3>Jose Rodrigo Quispe Gutierrez</h3>
+        <p class="rol">Analista de Sistemas</p>
+        <p>jrquispe40@umsa.bo</p>
+        <p>+57 310 234 5678</p>
+      </div>
+      
+      <!-- Miembro 3 -->
+      <div class="miembro">
+        <div class="miembro-icono">👨‍🎨</div>
+        <h3>Carlos Andres Quisbert Urquizo</h3>
+        <p class="rol">Diseñador UX/UI </p>
+        <p>caquisbert11@umsa.bo</p>
+        <p>+57 320 345 6789</p>
+      </div>
+      
+      <!-- Miembro 4 -->
+      <div class="miembro">
+        <div class="miembro-icono">👩‍🔧</div>
+        <h3>Franz Denilson Ayala Isidro</h3>
+        <p class="rol">Desarrolladora Backend</p>
+        <p>fdayala@umsa.bo</p>
+        <p>+57 315 456 7890</p>
+      </div>
+      
+      <!-- Miembro 5 -->
+      <div class="miembro">
+        <div class="miembro-icono">👨‍🔬</div>
+        <h3>Diego Alejandro Mayta Mayta</h3>
+        <p class="rol">Desarrollador Full Stack.</p>
+        <p>damayta1@umsa.bo</p>
+        <p>+57 301 567 8901</p>
+      </div>
+    </div>
+    
+    <!-- Formulario de contacto -->
+    <div class="formulario-contacto">
+      <h3>Envíanos un mensaje</h3>
+      <form id="formContacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-      <label for="email">Correo:</label>
-      <input type="email" id="email" name="email" required>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" required>
 
-      <button type="submit">Enviar</button>
-    </form>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Tu Sitio Web. Todos los derechos reservados.</p>
   </footer>
+  
+  <script>
+    // Validación simple del formulario
+    document.getElementById('formContacto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Aquí normalmente enviarías el formulario a un servidor
+      // Por ahora solo mostraremos un mensaje de confirmación
+      alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>
